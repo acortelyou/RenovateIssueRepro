@@ -17,12 +17,12 @@
       "matchDatasources": [
         "docker"
       ],
-      "matchPackageNames": [
-        "/alpine/"
+      "matchPackagePatterns": [
+        "alpine"
       ],
       "pinDigests": true,
       "groupName": "docker",
-      "matchCurrentVersion": "/(latest|3\\.18\\.\\d*)/",
+      "matchCurrentVersion": "/(latest|3\\.18\\.\\d+)/",
       "replacementNameTemplate": "{{{packageName}}}",
       "replacementVersion": "3.18",
       "description": "Replace alpine:latest and alpine:3.18.patch with alpine:3.18@digest"
