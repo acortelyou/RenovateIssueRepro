@@ -6,18 +6,16 @@
     "config:best-practices"
   ],
   "pinDigests": true,
-  "groupName": "renovate",  
+  "groupName": "renovate",
   "packageRules": [
     {
       "matchDatasources": [
-          "docker"
+        "docker"
       ],
       "matchPackageNames": [
         "alpine"
       ],
-      "matchCurrentVersion": [
-        "edge"
-      ],
+      "matchCurrentVersion": "edge",
       "replacementNameTemplate": "{{{packageName}}}",
       "replacementVersion": "latest"
     }
