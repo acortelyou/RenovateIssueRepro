@@ -5,19 +5,27 @@
   "extends": [
     "config:best-practices"
   ],
-  "pinDigests": true,
-  "groupName": "renovate",
   "packageRules": [
     {
       "matchDatasources": [
         "docker"
       ],
-      "matchPackageNames": [
-        "alpine"
+      "pinDigests": "true",
+      "groupName": "docker"
+    },
+    {
+      "matchDatasources": [
+        "docker"
       ],
-      "matchCurrentVersion": "edge",
+      "matchPackageNames": [
+        "/alpine/"
+      ],
+      "pinDigests": "true",
+      "groupName": "docker",
+      "matchCurrentVersion": "latest",
       "replacementNameTemplate": "{{{packageName}}}",
-      "replacementVersion": "latest"
+      "replacementVersion": "3.18",
+      "description": "Replace alpine:latest with alpine:3.18@digest"
     }
   ]
 }
